@@ -11,6 +11,7 @@ public class OutputFormatting {
             String s1=sc.next();
             int x=sc.nextInt();
             //Complete this line
+            //espacios ej. String.format("%-15s", s1);
             String padded = String.format("%-15s", s1);
             if ((String.valueOf(x).length() == 2)) {
                 System.out.println(padded +"0" + x);

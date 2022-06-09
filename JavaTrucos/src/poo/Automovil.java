@@ -4,11 +4,12 @@ public class Automovil {
 
     private String fabricante;
     private String modelo;
-    private String colo = "gris";
+    private Color colo = Color.NARANJO;
     private double cilindrada;
     private int capacidadEstanque = 40;
+    private TipoAutomovil tipo;
 
-    static String patente = "naranja";
+    static Color patente = Color.ROJO;
 
     public String getFabricante() {
         return fabricante;
@@ -26,11 +27,11 @@ public class Automovil {
         this.modelo = modelo;
     }
 
-    public String getColo() {
+    public Color getColo() {
         return colo;
     }
 
-    public void setColo(String colo) {
+    public void setColo(Color colo) {
         this.colo = colo;
     }
 
@@ -50,12 +51,20 @@ public class Automovil {
         this.capacidadEstanque = capacidadEstanque;
     }
 
-    public static String getPatente() {
+    public static Color getPatente() {
         return patente;
     }
 
-    public static void setPatente(String patente) {
+    public static void setPatente(Color patente) {
         Automovil.patente = patente;
+    }
+
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
     }
 
     @Override
@@ -80,6 +89,7 @@ public class Automovil {
         return "Automovil{" +
                 "fabricante='" + fabricante + '\'' +
                 ", modelo='" + modelo + '\'' +
+                ", tipo='" + tipo + '\'' +
                 ", patente='" + Automovil.patente + '\'' +
                 ", colo='" + colo + '\'' +
                 ", cilindrada=" + cilindrada +

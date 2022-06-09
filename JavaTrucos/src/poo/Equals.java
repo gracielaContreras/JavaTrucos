@@ -28,7 +28,7 @@ public class Equals {
         System.out.println("Ejemplos de toString");
         System.out.println(nissan); //llamar de forma implícita
         System.out.println(nissan.toString()); //llamar de forma explícita
-        Automovil.setPatente("Azul");
+        Automovil.setPatente(Color.AZUL);
         System.out.println(nissan);
     }
 }
