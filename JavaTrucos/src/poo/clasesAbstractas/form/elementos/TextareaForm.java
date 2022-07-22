@@ -33,8 +33,8 @@ public class TextareaForm extends ElemtosForm{
 
     @Override
     public String dibujarHtml() {
-        return "<textarea name=' " + this.nombre +
-                "' cols='" + this.columnas +
-                "' rows='> "+ this.valor +"' </textarea>";
+        return "<textarea name='" + this.nombre + "' cols='"
+                + this.columnas + "' rows='" + this.filas + "'>"
+                + this.valor + "</textarea>";
     }
 }

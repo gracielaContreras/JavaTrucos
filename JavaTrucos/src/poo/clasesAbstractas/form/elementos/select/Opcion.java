@@ -4,7 +4,7 @@ public class Opcion {
 
     private String valor;
     private String nombre;
-    private Boolean selected;
+    private boolean selected;
 
     public Opcion() {
     }
@@ -30,11 +30,16 @@ public class Opcion {
         this.nombre = nombre;
     }
 
-    public Boolean getSelected() {
+    public boolean isSelected() {
         return selected;
     }
 
-    public void setSelected(Boolean selected) {
+    public void setSelected(boolean selected) {
         this.selected = selected;
+    }
+    //sobrecarga de método. Entonces cada vez que se invoca y no tenga argumento se le asigna un valor true
+    public Opcion setSelected() {
+        this.selected = true;
+        return this;
     }
 }

@@ -34,11 +34,15 @@ public class SelectForm extends ElemtosForm{
             sb.append("\n<option value='")
                     .append(opcion.getValor())
                     .append("'");
-            if (opcion.getSelected()){
-
+            if (opcion.isSelected()){
+                sb.append(" selected");
+                this.valor = opcion.getValor();
             }
+            sb.append(">")
+                    .append(opcion.getNombre())
+                    .append("</option>");
         }
-
-        return null;
+        sb.append("</select>");
+        return sb.toString();
     }
 }
