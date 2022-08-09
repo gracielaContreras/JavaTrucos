@@ -13,7 +13,8 @@ public class EjemploArreglosForInversoMutable {
 
         int total = productos.length;
 
-        Arrays.sort(productos);
+        Arrays.sort(productos); //sort :  Ordena la matriz de objetos especificada en orden ascendente,
+                                            // de acuerdo con el orden natural de sus elementos.
 
         //ordena los elementos en forma inversa
         Collections.reverse(Arrays.asList(productos));
