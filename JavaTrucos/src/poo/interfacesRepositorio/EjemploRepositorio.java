@@ -1,17 +1,16 @@
 package poo.interfacesRepositorio;
 
 import poo.interfacesRepositorio.modelo.Cliente;
-import poo.interfacesRepositorio.repositorio.ClienteListRepositorio;
-import poo.interfacesRepositorio.repositorio.CrudRepositorio;
-import poo.interfacesRepositorio.repositorio.OrdenableRepositorio;
-import poo.interfacesRepositorio.repositorio.PaginableRepositorio;
+import poo.interfacesRepositorio.repositorio.*;
+import poo.interfacesRepositorio.repositorio.lista.ClienteListRepositorio;
+
 import static poo.interfacesRepositorio.repositorio.Direccion.ASC;
 
 public class EjemploRepositorio {
     public static void main(String[] args) {
 
         //Crear
-        CrudRepositorio cliente =  new ClienteListRepositorio();
+        OrdenablePaginableCrudRepositorio<Cliente> cliente =  new ClienteListRepositorio();
         cliente.crear(new Cliente("Eduardo", "Escobar"));
         cliente.crear(new Cliente("Dina", "Ortiz"));
         cliente.crear(new Cliente("Manuel", "Contreras"));
