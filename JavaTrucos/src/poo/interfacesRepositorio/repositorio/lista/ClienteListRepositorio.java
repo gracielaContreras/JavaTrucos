@@ -3,6 +3,8 @@ package poo.interfacesRepositorio.repositorio.lista;
 import poo.interfacesRepositorio.modelo.Cliente;
 import poo.interfacesRepositorio.repositorio.AbstractaListRepositorio;
 import poo.interfacesRepositorio.repositorio.Direccion;
+import poo.interfacesRepositorio.repositorio.excepciones.AccesoDatoExeption;
+import poo.interfacesRepositorio.repositorio.excepciones.LecturaAccesoDatoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
 public class ClienteListRepositorio extends AbstractaListRepositorio<Cliente> {
 
     @Override
-    public void modificar(Cliente cliente) {
+    public void modificar(Cliente cliente) throws LecturaAccesoDatoException {
         Cliente cli = this.porId(cliente.getId());
         cli.setNombre(cliente.getNombre());
         cli.setApellido(cliente.getApellido());
