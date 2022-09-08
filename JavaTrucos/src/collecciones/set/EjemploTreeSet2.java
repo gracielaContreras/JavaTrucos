@@ -1,8 +1,8 @@
-package collecciones;
+package collecciones.set;
 
 import java.util.TreeSet;
 
-public class EjemploTreeSet {
+public class EjemploTreeSet2 {
     public static void main(String[] args) {
         TreeSet<String> nombres = new TreeSet<>();
         nombres.add("raidentrance");
