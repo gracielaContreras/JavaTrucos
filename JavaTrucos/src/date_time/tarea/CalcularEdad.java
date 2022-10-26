@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 
 public class CalcularEdad {
     public static void main(String[] args) {
-        String nacimiento = "08-09-1991";
+        String nacimiento = "04-10-1992";
         LocalDate fechaNacimiento = LocalDate.parse(nacimiento
                                     , DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         LocalDate fechaActual = LocalDate.now();
