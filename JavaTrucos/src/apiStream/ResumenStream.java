@@ -5,6 +5,7 @@ import apiStream.models.Person;
 import java.util.*;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ResumenStream {
     public static void main(String[] args) {
@@ -48,8 +49,8 @@ public class ResumenStream {
 //        System.out.println(noneMaych);
         // Max
         people.stream()
-                .max(Comparator.comparing(Person::getAge));
-//                .ifPresent(System.out::println);
+                .max(Comparator.comparing(Person::getAge))
+                .ifPresent(System.out::println);
 
         // Min
         people.stream()
