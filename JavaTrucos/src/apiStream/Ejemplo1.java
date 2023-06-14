@@ -1,5 +1,7 @@
 package apiStream;
 
+import ejercicios.ComprobarVocales;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +34,9 @@ public class Ejemplo1 {
         //2° forma
         lista.stream().forEach(System.out::println);
 
+        ComprobarVocales a = new ComprobarVocales();
 
+        System.out.println(a.getHola());
 
     }
 }

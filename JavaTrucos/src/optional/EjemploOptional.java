@@ -44,15 +44,16 @@ public class EjemploOptional {
         List<String> paises = Arrays.asList("United States", "Argentina", "Spain", "Italy","Colombia", "Chile");
         Optional<String> pais = paises
                                 .stream()
-                                .filter(p -> p.startsWith("Chi")) //Busca en la lista los elementos que empiezan con "Chi"
+                                .filter(p -> p.startsWith("zt")) //Busca en la lista los elementos que empiezan con "zt"
                                 .map(String::toUpperCase)//Cambia el cuerpo del objeto
                                 .findFirst(); // devuelve el primer elemento que encuentra
-        pais.ifPresent(System.out::println);
+        pais.ifPresentOrElse(System.out::println
+                , () -> System.out.println( "No existe el dato "));
 
         //Otro Ejemplo
         paises
              .stream()
-             .filter(p -> p.startsWith("C")) //Busca en la lista los elementos que empiezan con "z"
+             .filter(p -> p.startsWith("C")) //Busca en la lista los elementos que empiezan con "C"
              .map(String::toUpperCase)
              .forEach(System.out::println);
 
@@ -65,13 +66,21 @@ public class EjemploOptional {
         System.out.println("Cuantos paises se encontró: " + paises1.size());
 
         //Otro Ejemplo
+        long seEncontro = paises
+                .stream()
+                .filter(p -> p.startsWith("z"))
+                .map(String::toUpperCase)//Busca en la lista los elementos que empiezan con "C"
+                .count();
+        System.out.println("Cuantos paises se encontró: " + seEncontro);
+
+        //Otro Ejemplo
         Optional<String> paises2 = paises
                 .stream()
                 .filter(p -> p.startsWith("z")) //Busca en la lista los elementos que empiezan con "z"
                 .map(String::toUpperCase)
                 .findFirst();
 
-        paises2.ifPresentOrElse( nom -> System.out.println(pais.get())
+        paises2.ifPresentOrElse( nom -> System.out.println(paises2.get())
                 , () -> System.out.println( "No se encontró los paises que empiezan con z"));
 
     }

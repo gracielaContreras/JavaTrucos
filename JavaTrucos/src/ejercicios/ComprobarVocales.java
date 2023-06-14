@@ -11,10 +11,41 @@ import java.util.Set;
  */
 
 public class ComprobarVocales {
+
+    String hola ="hola mamá";
+    public String getHola() {
+        return hola;
+    }
     public static void main(String[] args) {
         System.out.println(tieneVocales("dina"));
         System.out.println(tieneVocales("chhhch"));
         System.out.println(tieneVocales(null));
+
+        int valor = 0;
+        System.out.println(valor);
+
+        int[] a = new int[3];
+        a[0] = 3;
+        a[1] = 4;
+        a[2] = 1;
+        System.out.println("valor "+ a[0]);
+        Arrays.sort(a);
+        for (int j : a) {
+            System.out.println(j);
+        }
+
+        String[][] b = new String[1][2];
+        b[0][0] = "Dina";
+        b[0][1] = "Angela";
+//        b[1][0] = "Eduardo";
+//        b[1][1] = "Alvaro";
+
+        for (String j[] : b) {
+            for (String k : j) {
+                System.out.println(k);
+            }
+        }
+//        System.out.println(b[1][0]);
     }
     private static final Set<Character> vocales = new HashSet<>(
             Arrays.asList('a', 'e', 'i', 'o', 'u')

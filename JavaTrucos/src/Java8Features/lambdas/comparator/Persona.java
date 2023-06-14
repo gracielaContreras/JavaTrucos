@@ -12,6 +12,10 @@ public class Persona {
         this.apellido = apellido;
         this.edad = edad;
     }
+    public Persona(String nombre, Integer edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
 
     public String getNombre() {
         return nombre;
